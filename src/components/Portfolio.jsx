@@ -11,7 +11,7 @@ import Card from "./useComponents/Card";
 const Portfolio = () => {
 
     return (
-        <div name="portfolio" className="dark:from-white dark:to-gray-100 bg-gradient-to-b from-black to-gray-800 text-white sm:pb-32 md:pb-32 lg:pb-48"> {/*mAIN*/}
+        <div name="portfolio" className="dark:from-gray-100 dark:to-gray-100 bg-gradient-to-b from-black to-gray-800 text-white sm:pb-32 md:pb-32 lg:pb-48"> {/*mAIN*/}
             <div className="max-w-screen-lg p-4 mx-auto"> {/*Content*/}
                 <div className="pb-8"> {/*Div 1*/}
                     <Title title="Portfolio" />

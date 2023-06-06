@@ -1,14 +1,25 @@
 import React from 'react';
 import HeroImage from '../assets/heroImage.jpg'
 import {MdOutlineKeyboardArrowRight} from 'react-icons/md'
+import {FaSearch} from 'react-icons/fa'
 import { Link } from 'react-scroll'
+import {useTypewriter, Cursor} from "react-simple-typewriter";
 const Home = () => {
+
+    const [text] = useTypewriter({
+        words: ["Frontend", "Full-stack", "Backend"],
+        loop: true,
+        typeSpeed: 60,
+        deleteSpeed: 50,
+        delaySpeed: 2000,
+    });
+
     return (
-        <div name="home" className="h-screen dark:from-white dark:to-gray-100 bg-gradient-to-b from-black via-black to-gray-800">
+        <div name="home" className="h-screen dark:from-gray-100 dark:to-gray-100 bg-gradient-to-b from-black via-black to-gray-800">
             <div className="max-w-screen-lg mx-auto
             flex flex-col items-center justify-center h-full px-4 md:flex-row">
                 <div className="flex flex-col justify-center">{/*Main content*/}
-                    <h2 className="dark:text-gray-900 text-5xl sm:text-7xl font-bold text-white">I'm <span className="text-cyan-500">Frontend</span> Developer</h2>
+                    <h2 className="dark:text-gray-900 text-5xl sm:text-7xl font-bold text-white">I'm <span className="text-cyan-500">{text}</span><Cursor/> Developer</h2>
                     <p className="dark:text-gray-900 text-gray-500 py-4 max-w-md">
                         <span className="text-cyan-500">I have 1 year website development experience.</span>
                         Currently, I love to work on web application using technologies like
@@ -25,9 +36,9 @@ const Home = () => {
                         </Link>
                     </div>
                 </div>
-                <div>{/*Img*/}
-                    <img src={HeroImage} alt="my img" className="itd hover:scale-110 duration-300 rounded-2xl mx-auto w-2/3 md:w-full"/>
-                </div>
+                {/*<div className="">/!*Img*!/*/}
+                {/*    <img src={HeroImage} alt="my img" className="hover:scale-110 duration-300 rounded-2xl mx-auto w-2/3 md:w-full"/>*/}
+                {/*</div>*/}
             </div>
         </div>
     );

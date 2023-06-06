@@ -10,9 +10,7 @@ import Headroom from "react-headroom";
 function App() {
   return (
       <div>
-          <Headroom>
-              <NavBar />
-          </Headroom>
+          <NavBar />
           <Home />
           <About />
           <Portfolio />

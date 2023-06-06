@@ -12,7 +12,7 @@ import CardSkills from "./useComponents/CardSkills";
 
 const Experience = () => {
     return (
-        <div name="experience" className="dark:from-white dark:to-gray-100 bg-gradient-to-b from-gray-800 to-black pt-20 pb-20 sm:pb-0 sm:pt-0 sm:h-screen">
+        <div name="experience" className="dark:from-gray-100 dark:to-gray-100 bg-gradient-to-b from-gray-800 to-black pt-20 pb-20 sm:pb-0 sm:pt-0 sm:h-screen">
             <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center text-white">
                 <div>
                     <Title title="Experience" />

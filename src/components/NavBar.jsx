@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {FaBars, FaTimes} from 'react-icons/fa'
 import { Link } from 'react-scroll'
 import Theme from "./useComponents/Theme";
+import Headroom from "react-headroom";
 
 const NavBar = () => {
 
@@ -31,11 +32,10 @@ const NavBar = () => {
     ]
 
     return (
-        <nav className="flex dark:bg-gray-300 bg-black text-white justify-between p-6 items-center">
+        <nav className="flex dark:bg-gray-300 bg-black text-white justify-between px-6 py-4 z-50 sm:py-6 sm:px-6 items-center sticky top-0">
             {/*<div>*/}
             {/*    <h1 className="text-4xl sm:text-5xl font-signature">Dizi Code</h1>*/}
             {/*</div>*/}
-
             <div className="dark:text-black">
                 <Theme />
             </div>
@@ -49,16 +49,15 @@ const NavBar = () => {
                 ))}
             </ul>
 
-            <div onClick={() => setNav(!nav)} className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden">
+            <div onClick={() => setNav(!nav)} className="cursor-pointer pr-4 z-30 text-gray-500 md:hidden">
                 {nav ? <FaTimes size={30} /> : <FaBars  size={30}/> }
             </div>
-
             {nav && (
                 <ul className="flex flex-col justify-center items-center
                 absolute top-0 left-0 w-full h-screen bg-gradient-to-b
-                from-black to-gray-800 text-gray-500">
+                from-black to-gray-800 text-gray-500 dark:from-white dark:to-white z-20">
                     {links.map(({id, link}) => (
-                        <li key={id} className="px-4 cursor-pointer capitalize py-6 text-4xl">
+                        <li key={id} className="dark:text-gray-900 px-4 cursor-pointer capitalize py-6 text-4xl">
                             <Link
                                 onClick={() => setNav(!nav)}
                                 to={link}
@@ -71,7 +70,6 @@ const NavBar = () => {
                     ))}
                 </ul>
             )}
-
         </nav>
     );
 };

@@ -3,7 +3,7 @@ import Title from "./useComponents/Title";
 
 const Contact = () => {
     return (
-        <div name="contact" className="dark:from-white dark:to-gray-100 bg-gradient-to-b from-black to-gray-800 p-4 text-white h-screen">
+        <div name="contact" className="dark:from-gray-100 dark:to-gray-100 bg-gradient-to-b from-black to-gray-800 p-4 text-white h-screen">
             <div className="flex flex-col p-4 justify-center max-w-screen-lg h-full mx-auto">
                 <div className="pb-8">
                     <Title title="Contact" />

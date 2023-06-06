@@ -3,7 +3,7 @@ import Title from "./useComponents/Title";
 
 const About = () => {
     return (
-        <div name="about" className="dark:from-white dark:to-gray-100 h-screen bg-gradient-to-b from-gray-800 to-black text-white">
+        <div name="about" className="dark:from-gray-100 dark:to-gray-100 h-screen bg-gradient-to-b from-gray-800 to-black text-white">
             <div className="max-w-screen-lg mx-auto p-4">
                 <div className="pb-8">
                     <Title title="About" />
