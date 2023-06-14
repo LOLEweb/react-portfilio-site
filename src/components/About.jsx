@@ -1,23 +1,50 @@
+import {motion} from "framer-motion";
 import React from 'react';
 import Title from "./useComponents/Title";
 
 const About = () => {
+
+    const topAnimation = {
+        hidden: {
+            y: -100,
+            opacity: 0,
+        },
+        visible: custom => ({
+            y: 0,
+            opacity: 1,
+            transition: {delay: custom * 0.2},
+        }),
+    }
+
+
     return (
-        <div name="about" className="dark:from-gray-100 dark:to-gray-100 h-screen bg-gradient-to-b from-gray-800 to-black text-white">
+        <motion.div
+            initial="hidden"
+            whileInView="visible"
+            name="about" className="dark:from-gray-100 dark:to-gray-100 h-screen bg-gradient-to-b from-gray-800 to-black text-white">
             <div className="max-w-screen-lg mx-auto p-4">
-                <div className="pb-8">
+                <motion.div
+                    custom={1}
+                    variants={topAnimation}
+                    className="pb-8">
                     <Title title="About" />
-                </div>
-                <p className="dark:text-gray-900 dark:font-medium">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias architecto aut consequatur cumque, dolor earum eius fugiat in incidunt ipsam libero maiores nostrum, numquam quae rem veritatis? Amet illum nemo odit totam voluptates. Dolore eius error fuga ipsa nemo nostrum quo repellat sequi sint tenetur, ullam vel veniam, voluptas.
-                </p>
+                </motion.div>
+                <motion.p
+                    custom={2}
+                    variants={topAnimation}
+                    className="dark:text-gray-900 dark:font-medium">
+                    Hi, my name is Dmitry and I am from Yoshkar-Ola and I am a website developer. I am 17 years old and I am just starting my way in IT. This site is made completely about me and here you can learn a little more about me and my skills🙂 At the moment I am studying in the college, but unfortunately not in my specialty, in the future I will try to change the faculty I need.
+                </motion.p>
                 <br/>
-                <p className="dark:text-gray-900 dark:font-medium">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolore error facilis fugit iure labore quas quibusdam. Accusamus consequatur dolorum excepturi minus modi necessitatibus obcaecati quibusdam quod recusandae. Debitis ea iusto molestiae pariatur quaerat suscipit tempore! Consequuntur culpa est nam, nesciunt possimus praesentium quasi quibusdam ratione, repellat reprehenderit, sint velit?
-                </p>
+                <motion.p
+                    custom={3}
+                    variants={topAnimation}
+                    className="dark:text-gray-900 dark:font-medium">
+                    My path in IT began with courses on programming in iSpring, namely learning JavaScript and writing my first game in this language. After the first course I decided to try something new and found the perfect option for myself in the form of web development. I was given to me at first all very difficult, but later I was able to make a project for the defense and even work with a real client🙂
+                </motion.p>
             </div>
 
-        </div>
+        </motion.div>
     );
 };
 
