@@ -2,6 +2,7 @@ import React, {forwardRef} from 'react';
 import {motion} from "framer-motion";
 
 const CardSkills = forwardRef(({src, title, style}, ref) => {
+
     return (
         <div
             ref={ref}

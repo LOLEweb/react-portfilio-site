@@ -6,6 +6,7 @@ import Portfolio from "./components/Portfolio";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Headroom from "react-headroom";
+import FixLinks from "./components/FixLinks";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Contact />
 
           <SocialLinks />
+          {/*<FixLinks />*/}
       </div>
   );
 }
