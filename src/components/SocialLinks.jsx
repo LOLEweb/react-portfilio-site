@@ -14,7 +14,7 @@ const SocialLinks = () => {
                     VKontakte <FaVk size={30}/>
                 </>
             ),
-            href: 'https://vk.com/kushakov3',
+            href: 'https://vk.com/dizisxd',
             style: 'rounded-tr-md'
         },
         {
